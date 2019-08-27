@@ -32,10 +32,6 @@ def test_cell_neighbor_locations_correct():
     #There are a max of 8 neighbors for any one cell on a grid
     location = [2,3]
     cell = Cell(location, True)
-    row_above = location[0] -1 # take x location and subtract by one to get row above cell
-    row_below = location[0] + 1 # increment x location to get row below cell
-    col_left = location[1] - 1 # decrement column value to get column to the left of the cell
-    col_right = location[1] + 1 # column to the right of the cell
 
     neighbors_row_above = helper_get_above_neigbors(location)
     neighbors_row_on = helper_get_on_neighbors(location)
