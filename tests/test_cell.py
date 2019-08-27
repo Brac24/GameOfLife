@@ -68,11 +68,10 @@ def helper_get_on_neighbors(location):
     return neighbors_row_on
 
 
-def test_cell_init_at_first_row_no_above_neighbors():
+def test_cell_init_at_origin_no_above_and_below_neighbors():
     location = [0,0]
     cell = Cell(location, True)
-    neighbors_expected = helper_get_on_neighbors(location)
-    neighbors_expected.extend(helper_get_below_neigbors(location))
+    neighbors_expected = [[0,1],[1,1],[1,0]]
 
     neighbors = cell.get_neighbors()
     assert neighbors == neighbors_expected

@@ -20,7 +20,11 @@ class Cell:
             below = [row_below, location[1]]
             bottom_right_corner = [row_below, col_right]
 
-            self.neighbors = [left_top_corner, above, right_top_corner, left, right, bottom_left_corner, below, bottom_right_corner]
+            #If col number and row number greater than 0 then do normal neighbor location
+            if(col_left >= 0 and row_above >= 0):
+                self.neighbors = [left_top_corner, above, right_top_corner, left, right, bottom_left_corner, below, bottom_right_corner]
+            elif(location == [0,0]):
+                self.neighbors = [right, bottom_right_corner, below]
 
     def kill(self):
         self.alive = False
