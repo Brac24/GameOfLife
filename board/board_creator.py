@@ -1,4 +1,5 @@
 import random
+from cell.cell import Cell
 
 def deadstate(rows, cols):
     board = []
@@ -33,6 +34,21 @@ def render(board):
                 line += ' '
         
         print(line)
+
+def render_world(cell_board):
+    rows = len(cell_board)
+    cols = len(cell_board[0])
+    for row in range(rows):
+        line = ''
+        for col in range(cols):
+            cell = cell_board[row][col]
+            if cell.alive:
+                line += '0'
+            else:
+                line += ' '
+        
+        print(line)
+
 
 if __name__ == '__main__':
     board = deadstate(2,3)

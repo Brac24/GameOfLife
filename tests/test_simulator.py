@@ -8,3 +8,4 @@ def test_simulator_initialized_correct_state():
 def test_simulator_initialized_correct_size():
     simulator = Simulator(31,57)
     assert simulator.get_board_size() == [31,57]
+

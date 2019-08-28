@@ -25,6 +25,8 @@ class Cell:
                 self.neighbors = [left_top_corner, above, right_top_corner, left, right, bottom_left_corner, below, bottom_right_corner]
             elif(location == [0,0]):
                 self.neighbors = [right, bottom_right_corner, below]
+            else:
+                self.neighbors = [left_top_corner, above, right_top_corner, left, right, bottom_left_corner, below, bottom_right_corner]
 
     def kill(self):
         self.alive = False
