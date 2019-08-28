@@ -14,11 +14,9 @@ class Simulator():
         board = board_creator.randomstate(60,205)
         world = World(board)
         while True:
-            #os.system('cls' if os.name == 'nt' else 'clear')
             board_creator.render_world(world.world)
             world.next_day()
             print('-----------------------------------------------------------------------------------------------------')
-            #time.sleep(.05)
 
 
 
