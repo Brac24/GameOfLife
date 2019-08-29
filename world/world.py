@@ -17,6 +17,8 @@ class World():
         cell = self.world[x][y]
         return cell
 
+    #As of now this function goes element by element beginning with the first row and updating 
+    #each cell object as it traverses the 2D list of cells
     def next_day(self):
         for row in range(len(self.world)):
             for col in range(len(self.world[0])):
