@@ -26,6 +26,7 @@ def render(board):
 def render_world(cell_board):
     rows = len(cell_board)
     cols = len(cell_board[0])
+    board_display = ''
     for row in range(rows):
         line = ''
         for col in range(cols):
@@ -34,8 +35,9 @@ def render_world(cell_board):
                 line += '0'
             else:
                 line += ' '
+        board_display += line + '\n'
+    print(board_display)
         
-        print(line)
 
 
 if __name__ == '__main__':
