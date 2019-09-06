@@ -22,7 +22,7 @@ def get_test_board_over_population():
     return board
 
 def test_world_init_cell_in_correct_state():
-    dead_board = board_creator.deadstate(5,5)
+    dead_board = [[0 for col in range(5)] for row in range(5)]
     world = World(dead_board)
     cell = world.cell_at(2,2)
     assert cell.alive == False
