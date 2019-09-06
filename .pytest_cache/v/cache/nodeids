@@ -1,0 +1,18 @@
+[
+  "tests/test_board_init_random.py::test_consecutive_boards_not_equal",
+  "tests/test_board_init_random.py::test_rows_not_equal",
+  "tests/test_board_init_random.py::test_multiple_random_boards_not_equal",
+  "tests/test_cell.py::test_cell_init_correct_location_not_alive",
+  "tests/test_cell.py::test_cell_correct_location_alive",
+  "tests/test_cell.py::test_cell_kill_dead_state",
+  "tests/test_cell.py::test_cell_spawn_alive_state",
+  "tests/test_cell.py::test_cell_neighbor_locations_correct",
+  "tests/test_cell.py::test_cell_init_at_origin_no_above_and_below_neighbors",
+  "tests/test_simulator.py::test_simulator_initialized_correct_state",
+  "tests/test_simulator.py::test_simulator_initialized_correct_size",
+  "tests/test_world.py::test_world_init_cell_in_correct_state",
+  "tests/test_world.py::test_world_init_cell_in_correct_state2",
+  "tests/test_world.py::test_world_cell_dies_off",
+  "tests/test_world.py::test_world_cell_spawns",
+  "tests/test_world.py::test_world_cell_dies_over_population"
+]
