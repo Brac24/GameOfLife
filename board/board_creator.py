@@ -1,25 +1,13 @@
 import random
 from cell.cell import Cell
 
-def deadstate(rows, cols):
-    board = []
-    
-    #add the row of zeros to the board
-    for row in range(rows):
-        deadrow = []
-        for col in range(cols):
-            deadrow.append(0)
-        board.append(deadrow)
-    
-    return board
-
 def randomstate(rows, cols):
-    board = deadstate(rows, cols)
-    for row in range(rows):
-        for col in range(cols):
-            value = random.random()
-            if(value >= .9):
-                board[row][col] = 1
+    #list comprehension to generate a list of lists with random 1's and 0's
+    #We can think of this nested list comprehension in terms of nested for loops
+    #In nested for loops the inner loop can be considered the column and the outer loop the row
+    #Same applies here where the inner list comprehension referes to the column and the outer refers to the row
+    board = [[1 if random.random() >= .94 else 0 for col in range(cols)] for row in range(rows)]
+
     return board
 
 def render(board):
@@ -51,7 +39,6 @@ def render_world(cell_board):
 
 
 if __name__ == '__main__':
-    board = deadstate(2,3)
     board_random = randomstate(10,70)
     render(board_random)
 

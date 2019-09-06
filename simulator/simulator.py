@@ -11,7 +11,7 @@ class Simulator():
         return [len(self.board), len(self.board[0])]
 
     if __name__ == '__main__':
-        board = board_creator.randomstate(60,205)
+        board = board_creator.randomstate(40,150)
         world = World(board)
         while True:
             board_creator.render_world(world.world)
