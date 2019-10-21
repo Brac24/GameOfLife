@@ -38,7 +38,7 @@ class World():
                             live_neighbor_count += 1
 
                 #logic that decides the destiny of a cell
-                if live_neighbor_count in [0,1] and cell.alive:
+                if live_neighbor_count in [0, 1] and cell.alive:
                     cell.kill()
                 elif live_neighbor_count > 3 and cell.alive:
                     cell.kill()
